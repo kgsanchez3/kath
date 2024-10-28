@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irresistible Bakes by Kath</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+            <label class="logo"><img src="img/logo.png" alt="Bakes by Kath"></label>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a class="active" href="#">Products</a></li>
+              <li><a href="order-now.html">Order Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="product">
+            <div class="header-search">
+                <h1>Product Page</h1>
+                <div class="search-container">
+                    <input type="text" placeholder="Search" class="search-bar">
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="product-grid">
+                    <!-- Product Cards with enabled order functionality -->
+                    <div class="product-card">
+                        <img src="img/biscoff.jpg" alt="Biscoff Cookies">
+                        <h2>Biscoff Cookies</h2>
+                        <div class="price-order">
+                            <p>₱60.00</p>
+                            <button onclick="addToCart('Biscoff Cookies', 60)">Order</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/pistachio.jpg" alt="Pistachio Cookies">
+                        <h2>Pistachio Cookies</h2>
+                        <div class="price-order">
+                            <p>₱70.00</p>
+                            <button onclick="addToCart('Pistachio Cookies', 70)">Order</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/nutella.jpg" alt="Nutella Cookies">
+                        <h2>Nutella Cookies</h2>
+                        <div class="price-order">
+                            <p>₱60.00</p>
+                            <button onclick="addToCart('Nutella Cookies', 60)">Order</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/red velvet.jpg" alt="Red Velvet Cookies">
+                        <h2>Red Velvet Cookies</h2>
+                        <div class="price-order">
+                            <p>₱60.00</p>
+                            <button onclick="addToCart('Red Velvet Cookies', 60)">Order</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/dark chocolate.jpg" alt="Dark Chocolate Cookies">
+                        <h2>Dark Chocolate Cookies</h2>
+                        <div class="price-order">
+                            <p>₱55.00</p>
+                            <button onclick="addToCart('Dark Chocolate Cookies', 55)">Order</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/choco oreo.jpg" alt="Choco Oreo Cookies">
+                        <h2>Choco Oreo Cookies</h2>
+                        <div class="price-order">
+                            <p>₱60.00</p>
+                            <button onclick="addToCart('Choco Oreo Cookies', 60)">Order</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/rainbow.jpg" alt="Rainbow Cookies">
+                        <h2>Rainbow Cookies</h2>
+                        <div class="price-order">
+                            <p>₱70.00</p>
+                            <button onclick="addToCart('Rainbow Cookies', 70)">Order</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/strawberry.jpg" alt="Strawberry Cookies">
+                        <h2>Strawberry Cookies</h2>
+                        <div class="price-order">
+                            <p>₱70.00</p>
+                            <button onclick="addToCart('Strawberry Cookies', 70)">Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!------------------ FOOTER -------------> 
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="img/footer_logo.png" alt="Irresistible Bakes by Kath">
+            </div>
+            <div class="footer-content">
+                <h3>SOCIAL MEDIA</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>EXPLORE</h3>
+                <ul class="explore-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <hr>
+            <p>© 2024 Irresistible Bakes by Kath. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to enable cart functionality
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function addToCart(item, price) {
+            let existingItem = cart.find(product => product.name === item);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name: item, price: price, quantity: 1 });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart)); // Store cart in localStorage
+            alert(item + " added to cart!");
+        }
+    </script>      
+</body>
+</html>

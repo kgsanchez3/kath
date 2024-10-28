@@ -1,0 +1,120 @@
+footer {
+    background-color: #FFF8DB; /* Light cream color */
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-logo img {
+    width: 150px; /* Adjust the size as needed */
+}
+
+.footer-content {
+    margin: 0 20px; /* Margin between footer sections */
+    flex: 1; /* Allow footer content to grow evenly */
+}
+
+.footer-content h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.social-icons,
+.explore-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li,
+.explore-links li {
+    display: inline; /* Display items inline for horizontal layout */
+    margin: 0 10px;
+}
+
+.social-icons li a {
+    text-decoration: none;
+    color: #333; /* Dark color for the icons */
+    font-size: 24px; /* Size of social media icons */
+}
+
+.social-icons li a:hover {
+    color: #FFCD00; /* Change color of the icon on hover */
+}
+
+.social-icons li a::after {
+    content: ''; /* Create an empty content */
+    display: block; /* Block to apply width */
+    width: 100%; /* Full width */
+    height: 2px; /* Thickness of the underline */
+    position: absolute; /* Position relative to the text */
+    left: 0;
+    transform: scaleX(0); /* Initially hide the underline */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.social-icons li a:hover::after {
+    transform: scaleX(1); /* Show underline on hover */
+}
+
+
+.explore-links li a {
+    text-decoration: none; /* Remove default underline */
+    color: #333; /* Color of the text */
+    position: relative; /* Required for the pseudo-element */
+}
+
+.explore-links li a::after {
+    content: ''; /* Create an empty content */
+    display: block; /* Block to apply width */
+    width: 100%; /* Full width */
+    height: 2px; /* Thickness of the underline */
+    background: #FFCD00; /* Underline color */
+    position: absolute; /* Position relative to the text */
+    left: 0;
+    bottom: -5px; /* Space between text and underline */
+    transform: scaleX(0); /* Initially hide the underline */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.explore-links li a:hover::after {
+    transform: scaleX(1); /* Show underline on hover */
+}
+
+.bottom-bar {
+    margin-top: 20px;
+}
+
+.bottom-bar hr {
+    margin: 10px 0;
+}
+
+.bottom-bar p {
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .footer-content {
+        text-align: center; /* Center text on smaller screens */
+        margin: 10px 0; /* Margin between footer content */
+    }
+
+    .social-icons li,
+    .explore-links li {
+        display: block; /* Stack social media icons and explore links */
+        margin: 5px 0;
+    }
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now - Irresistible Bakes by Kath</title>
+    <link rel="stylesheet" href="css/header.css"> <!-- Assuming this handles the consistent header style -->
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Additional styles specific to the Order Now page */
+        .cart-section {
+            padding: 20px;
+            text-align: center;
+        }
+        .cart-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .cart-item span {
+            font-size: 1.2em;
+        }
+        .cart-item button {
+            margin-left: 10px;
+            background-color: #f04e31;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .cart-item button:hover {
+            background-color: #e63e21;
+        }
+        .cart-total, #checkout-btn {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+        #checkout-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #checkout-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (now fixed to match the other pages) -->
+    <header>
+        <nav>
+            <!-- Checkbox for toggling menu -->
+            <input type="checkbox" id="check">
+        
+            <!-- Menu icon -->
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            
+            <!-- Navigation links (organized like the other pages) -->
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="product-page.html">Products</a></li>
+              <li><a class="active" href="order-now.html">Order Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cart-section">
+        <div class="cart-container">
+            <h1>Your Cart</h1>
+            <div id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <h3 class="cart-total" id="cart-total">Total: ₱0.00</h3>
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="img/footer_logo.png" alt="Irresistible Bakes by Kath">
+            </div>
+            <p>© 2024 Irresistible Bakes by Kath. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Retrieve cart from localStorage or initialize empty cart
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function renderCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            cartItems.innerHTML = ''; // Clear existing items
+            let total = 0;
+
+            // Check if cart is empty
+            if (cart.length === 0) {
+                cartItems.innerHTML = "<p>Your cart is empty.</p>";
+            } else {
+                // Iterate through cart items and display them
+                cart.forEach(product => {
+                    total += product.price * product.quantity;
+                    cartItems.innerHTML += `
+                        <div class="cart-item">
+                            <span>${product.name} - ₱${product.price} x ${product.quantity}</span>
+                            <div>
+                                <button onclick="increaseQuantity('${product.name}')">+</button>
+                                <button onclick="decreaseQuantity('${product.name}')">-</button>
+                                <button onclick="removeFromCart('${product.name}')">Delete</button>
+                            </div>
+                        </div>`;
+                });
+            }
+
+            cartTotal.innerText = `Total: ₱${total.toFixed(2)}`;
+            localStorage.setItem('cart', JSON.stringify(cart)); // Save updated cart to local storage
+        }
+
+        function increaseQuantity(itemName) {
+            let product = cart.find(product => product.name === itemName);
+            if (product) {
+                product.quantity += 1;
+                renderCart();
+            }
+        }
+
+        function decreaseQuantity(itemName) {
+            let product = cart.find(product => product.name === itemName);
+            if (product && product.quantity > 1) {
+                product.quantity -= 1;
+                renderCart();
+            }
+        }
+
+        function removeFromCart(itemName) {
+            cart = cart.filter(product => product.name !== itemName);
+            renderCart();
+        }
+
+        window.onload = renderCart; // Render the cart when the page loads
+    </script>
+</body>
+</html>

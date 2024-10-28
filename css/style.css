@@ -1,0 +1,1115 @@
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> HOME PAGE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.hero {
+    background-image: url('../img/cookies.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 60vh; /* Set a default height */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.51); /* Dark overlay */
+    z-index: 1; /* Below text but above the image */
+}
+
+.hero-content {
+    text-align: center;
+    position: relative; /* For positioning buttons */
+    z-index: 5; /* Ensure content is above the overlay */
+}
+
+.nav-button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    z-index: 10; /* Bring buttons above the overlay */
+}
+
+.prev-button {
+    left: 20px; /* Adjust position */
+}
+
+.next-button {
+    right: 20px; /* Adjust position */
+}
+
+.text-container {
+    z-index: 5; /* Ensure text is above overlay */
+}
+
+.text-container h1 {
+    color: #fff;
+    font-size: 50px; /* Default size */
+    margin: 0;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    font-weight: lighter;
+}
+
+.text-container h5 {
+    color: #fff;
+    font-size: 18px; /* Default size */
+    margin: 10px 0;
+    font-weight: lighter;
+    font-family: "Archivo", sans-serif; /* Apply the specified font */
+}
+
+.order-button, .order-button a {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.order-button:hover, .order-button a:hover {
+    background-color: #CCCAF1;
+}
+
+.dot-indicator {
+    position: absolute;
+    bottom: 20px; /* Adjust for spacing from bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px; /* Space between dots */
+    z-index: 5;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb; /* Gray color */
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: white; /* Darker color for the active dot */
+}
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> WELCOME SECTION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.welcome {
+    text-align: center;
+    background-color: #f9f9f9; 
+    padding: 40px 100px;
+    margin: 20px 0; 
+    border-radius: 10px; 
+}
+
+.welcome h2 {
+    font-size: 28px; 
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 16px; 
+    color: #555; 
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ORDER AHEAD SECTION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.order-ahead {
+    text-align: left;
+    background-color: #fdd9e5; 
+    margin: 0 0; 
+    border-radius: 10px;
+    padding: 50px; 
+}
+
+.order-ahead-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.order-text {
+    flex: 1; 
+    padding-right: 20px;
+}
+
+.order-image {
+    flex: 1; 
+}
+
+.order-img {
+    width: 70%; /* Make image responsive */
+    border-radius: 10px;
+}
+
+.order-ahead h2 {
+    font-size: 20px; 
+    margin-bottom: 20px;
+}
+
+
+.order-btn {
+    background-color: #ffcc00; 
+    color: black; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    margin-top: 10px;
+    display: inline-flex; 
+    align-items: center; 
+    font-weight: bold;
+}
+.order-btn a {
+    background-color: #ffcc00; 
+    color: black; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px;
+    font-size: 16px; 
+    cursor: pointer; 
+    display: inline-flex; 
+    align-items: center; 
+    font-weight: bold;
+}
+
+.order-btn:hover, .order-btn a:hover {
+    background-color: #CCCAF1;
+}
+
+.order-btn i {
+    margin-right: 4px;
+}
+
+.order-ahead p {
+    font-size: 16px;
+    color: #555;
+    font-style: italic; 
+}
+
+
+
+/* >>>>>>>>>>>>>>>> SECOND SECTION <<<<<<<<<<<<<<< */
+.order-ahead-second {
+    text-align: left;
+    background-color: #fff3f3; 
+    margin: 0; 
+    border-radius: 10px;
+    padding: 50px; 
+}
+
+.order-ahead-second-content {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 50px;
+}
+
+.second-section-text {
+    flex: 2; /* Increase the flex value to give more space to text */
+    max-width: 500px; /* Adjust as necessary for the desired text width */
+}
+
+.second-section-img {
+    flex: 1; 
+    max-width: 400px; /* Set a max-width for the image container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.second-section-img img {
+    width: 100%; 
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+.order-ahead p {
+    font-size: 14px;
+    color: #555;
+    font-style: italic; 
+    max-width: 90%; 
+    margin: 0 auto; /* Center the paragraph */
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>> OUR PRODUCT SECTION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.course{
+    text-align: center;
+    background-color: #ffff;
+    padding: 20px 100px;
+}
+.row {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-col {
+    flex-basis: 25%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.product-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%; /* Makes image responsive */
+}
+
+.course h2 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0 0; 
+}
+
+.course h1 {
+    font-size: 36px; 
+    margin-bottom: 20px; 
+    color: #333; 
+}
+
+.view-more-btn, .view-more-btn a {
+    background-color: #CCCAF1; 
+    color: black; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    margin-top: 0px; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.view-more-btn i {
+    margin-left: 5px; 
+}
+
+.view-more-btn:hover, .view-more-btn a:hover {
+    background-color: #e6b800; 
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ABOUT US PAGE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/*  */
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-image: url('../img/scoop.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; 
+}
+
+/* Dark Overlay */
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.855); /* Dark overlay with 50% opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Centered Content */
+.hero-content {
+    text-align: center;
+    color: white;
+    max-width: 800px; /* Maximum width for content */
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.hero-content p {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.about-us {
+    text-align: center;
+    background-color: #fdd9e5; 
+    margin: 0;
+    padding: 20px; 
+    border-radius: 10px; 
+    align-items: center;
+}
+
+.about-us h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    max-width: 500px; /* Set a maximum width for the paragraph */
+    margin-left: auto; /* Center align */
+    margin-right: auto; /* Center align */
+}
+
+.commitment {
+    display: flex;
+    flex-direction: column; 
+}
+
+.commitment-item {
+    text-align: center;
+    margin: 20px 0; /* Add space between items */
+}
+
+.commitment-item h2 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.commitment-item p {
+    margin-top: 10px;
+}
+
+.commitment-item img {
+    width: 50px; /* Set the image width */
+    height: auto; /* Keep the aspect ratio */
+    margin-bottom: 10px; /* Space between image and heading */
+}
+.commitment-icon {
+    margin-right: 10px; /* Adds space between the image and the heading */
+}
+
+/* Location Section */
+.location-section {
+    text-align: center;
+    background-color: #ffff; 
+    margin-top: 5px;
+    padding: 30px; 
+    border-radius: 10px; 
+}
+
+.location-section h1 {
+    margin-bottom: 20px;
+}
+
+/* Flexbox Layout */
+.location-content {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 50px; 
+}
+
+/* Styling for the second column */
+.second-row {
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: space-between; /* Space between items */
+    height: 100%; /* Fill the height of the parent */
+    text-align: left; /* Align text to the left */
+    width: 250px; 
+}
+.second-row p {
+    font-size: medium;
+    text-align: left;
+    font-weight: 500;
+}
+.second-row button {
+    text-align: center;
+}
+
+.view-more-btn-about{
+    background-color: #CCCAF1; 
+    color: black; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    margin-top: 0px; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.view-more-btn-about a {
+    background-color: #CCCAF1; 
+    color: black; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    margin-top: 0px; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.view-more-btn-about i {
+    margin-left: 5px; 
+}
+
+.view-more-btn-about:hover, .view-more-btn-about a:hover {
+    background-color: #e6b800; 
+}
+
+.order-btn-about{
+    background-color: #ffcc00; 
+    color: black; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    margin-top: 10px;
+    display: inline-flex; 
+    align-items: center; 
+    font-weight: bold;
+}
+.order-btn-about a {
+    background-color: #ffcc00; 
+    color: black; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px;
+    font-size: 16px; 
+    cursor: pointer; 
+    display: inline-flex; 
+    align-items: center; 
+    font-weight: bold;
+}
+
+.order-btn-about:hover, .order-btn-about:hover a{
+    background-color: #CCCAF1;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> PRODUCT PAGE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/* Ensure the container is centered and content is responsive */
+body{
+    background-color: #CCCAF14D;
+}
+
+section .container {
+    max-width: 100%;
+    margin: 20px 100px;
+    text-align: center;
+}
+
+/* Search bar styling */
+.search-container {
+    margin-bottom: 20px;
+}
+
+section .header-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px; 
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Style for the search bar */
+section .search-bar {
+    width: 100%;
+    max-width: 500px; /* Control the width */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-weight: bold; /* Add weight to the input text */
+}
+
+/* Adjust the h1 styling for better alignment */
+section h1 {
+    font-size: 24px;
+    margin: 0;
+}
+/* Product grid displaying items in a row */
+section .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensure equal spacing between items */
+    gap: 20px;
+}
+
+section .product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px; /* Ensures the cards stay in rows */
+    max-width: 300px; 
+    display: flex;
+    flex-direction: column; /* Stack elements in one column */
+    justify-content: space-between;
+}
+
+/* Ensures product image scales well */
+section .product-card img {
+    width: 100%;
+    height: 60%;
+    border-radius: 15px;
+}
+
+section .product-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    white-space: normal; /* Prevents wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;; /* Adds ... if the text is too long */
+}
+
+.price-order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+section .product-card p {
+    font-size: 16px;
+    color: green;
+    font-weight: bold;
+    margin: 0; /* Removes margin to prevent spacing issues */
+}
+
+/* Button styling */
+section .product-card button {
+    background-color: black;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+section .product-card button:hover {
+    background-color: green;
+}
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ORDER NOW <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+section .shopping-cart-card{
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* First Row: Cart Header */
+.cart-header h1 {
+    text-align: left;
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Second Row: Card for Cart Items */
+.cart-items-card {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #facde25a;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.item-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Item Image */
+.item-image img {
+    width: 250px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Item Info */
+.item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.item-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.item-price {
+    font-size: 18px;
+    color: #0BC21E;
+    font-weight: bold
+}
+
+/* Item Quantity Section */
+.item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.spacer {
+    display: flex;
+    justify-content: space-between; /* Push trash icon to the right */
+    align-items: center; /* Align quantity controls and trash icon vertically */
+    width: 100%;
+}
+
+
+.minus-btn, .plus-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 50%; /* Make the buttons round */
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minus-btn:hover, .plus-btn:hover{
+    background-color: black;
+    color: white;
+} 
+
+.quantity {
+    padding: 0 5px;
+    font-size: 16px;
+}
+
+.trash-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.trash-icon:hover {
+    transform: scale(1.2); /* Scale the icon slightly on hover */
+    filter: brightness(1.5); /* Brighten the icon on hover */
+}
+
+/* Third Row: Order Summary */
+.order-summary {
+    margin-top: 20px;
+}
+
+.order-summary h2 {
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.summary-items {
+    color: rgba(0, 0, 0, 0.462);
+    margin-top: 10px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 1px solid #ddd;
+}
+
+/* Fourth Row: Cart Total */
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.total-price {
+    font-weight: bold;
+    color: #0BC21E;
+}
+
+/* Fifth Row: Buttons */
+.cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px; /* Space between the buttons */
+}
+
+.continue-shopping-btn, .proceed-payment-btn {
+    flex: 1; 
+    padding: 8px; 
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    font-weight: bold;
+}
+
+.continue-shopping-btn {
+    border-color: #000000;
+    background-color: #dddddd00;
+    color: #1b1b1b;
+}
+
+.proceed-payment-btn {
+    background-color: #000000;
+    color: #fff;
+}
+
+/* Hover effects */
+.proceed-payment-btn:hover, .continue-shopping-btn:hover {
+    background-color: #0BC21E; 
+    border-color: #0BC21E;
+    color: #000000; 
+}
+
+/* Rounded buttons */
+.continue-shopping-btn, 
+.proceed-payment-btn, 
+.minus-btn, 
+.plus-btn {
+    border-radius: 50px; /* Rounded buttons */
+}
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>> TABLET FOR TABLET <<<<<<<<<<<<<<<<<<<<<<<<< */
+/* >>>>>>>> HOMEPAGE <<<<<<<<<<<< */
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh; /* Reduce height for tablets */
+    }
+
+    .text-container h1 {
+        font-size: 36px; /* Reduce font size for smaller screens */
+    }
+
+    .text-container h5 {
+        font-size: 16px; /* Reduce font size for smaller screens */
+    }
+
+    .nav-button {
+        font-size: 20px; /* Smaller buttons */
+        padding: 8px; /* Smaller padding */
+    }
+
+    .order-button {
+        font-size: 14px; /* Smaller button text */
+        padding: 8px 16px; /* Adjust button size */
+    }
+
+
+        /* >>>>>>>> ORDER AHEAD SECTION <<<<<<<<<<<< */
+    .order-ahead {
+        padding: 30px; 
+    }
+
+    .order-ahead-content {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .order-text {
+        padding-right: 0; 
+        text-align: center; 
+    }
+
+    .order-image {
+        margin-top: 20px; 
+        flex: none; 
+    }
+
+    .order-img {
+        width: 60%; 
+    }
+
+    .order-ahead h2 {
+        font-size: 18px; 
+    }
+
+    .order-ahead p {
+        font-size: 14px; 
+    }
+
+    .order-btn {
+        font-size: 14px; 
+        padding: 8px 16px; 
+    }
+
+        /* >>>>>>>> OUR PRODUCT SECTION <<<<<<<<<<<< */
+        .course h1{
+            font-size: 25px; 
+            margin-bottom: 10px; 
+        }
+        .row {
+            flex-direction: column;
+        }
+        .welcome, .order-ahead {
+            padding: 20px; /* Reduced padding on mobile */
+        }
+    
+        .order-btn{
+            font-size: 14;
+            padding: 9px 12px;
+            font-weight: 500;
+        }
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ABOUT US PAGE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+        section .container{
+            margin: 20px 50px;
+
+        }
+
+        section .product-grid {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        section .header-search {
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        section .search-bar {
+            max-width: 100%; /* Full width on small screens */
+            margin-top: 10px;
+        }
+
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr); /* Force 2 columns on small devices */
+        }
+
+        .hero-content h1 {
+            font-size: 25px;
+        }
+    
+        .hero-content p {
+            font-size: 12px;
+        }
+        .hero-section {
+            z-index: 1; 
+        }
+
+        .location-content {
+            flex-direction: column; 
+            align-items: center; 
+        }
+    
+        .second-row {
+            width: 100%; 
+            text-align: center; 
+        }
+        
+        iframe {
+            width: 100%; 
+            height: 300px; 
+        }
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> PRODUCT PAGE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+        section {
+            padding: 15px;
+        }
+
+        .item-card {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .item-image img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .item-info {
+            margin: 0;
+            text-align: center;
+        }
+
+        .item-quantity {
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .item-quantity .trash-icon {
+            margin-left: 15px;
+        }
+
+        .cart-total {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cart-total span {
+            margin: 5px 0;
+        }
+
+        .cart-buttons {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .continue-shopping-btn, 
+        .proceed-payment-btn {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .order-summary h2, .cart-header h1 {
+            text-align: center;
+        }
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> STYLE FOR PHONE <<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+@media (max-width: 480px) {
+    /* >>>>>>>> HOMEPAGE <<<<<<<<<<<< */
+    .hero {
+        height: 40vh; 
+    }
+
+    .text-container h1 {
+        font-size: 28px; 
+    }
+
+    .text-container h5 {
+        font-size: 14px; 
+    }
+
+    .nav-button {
+        font-size: 18px; 
+        padding: 6px; 
+    }
+
+    .order-button {
+        font-size: 12px; 
+        padding: 6px 12px; 
+    }
+
+            /* >>>>>>>> ORDER AHEAD SECOND SECTION <<<<<<<<<<<< */
+            .order-ahead-second {
+                padding: 20px; 
+            }
+        
+            .order-ahead p {
+                font-size: 12px; 
+            }
+
+    /* >>>>>>>> ORDER AHEAD SECTION <<<<<<<<<<<< */
+    .order-ahead {
+        padding: 20px; 
+    }
+
+    .order-ahead h2 {
+        font-size: 16px; 
+    }
+
+    .order-ahead p {
+        font-size: 12px; 
+    }
+
+            /* >>>>>>>> OUR PRODUCT SECTION <<<<<<<<<<<< */
+            .course h2 {
+                font-size: 14px;      
+            }
+            .order-btn{
+                font-size: 12;
+                padding: 7px 10px;
+                font-weight: 500;
+            }
+            
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ABOUT US PAGE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 column for extra-small screens */
+    }
+    .hero-section {
+        z-index: 1; /* Ensure hero section stays behind the sidebar */
+    }
+    section .header-search {
+        margin: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ORDER NOW <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+    .item-card {
+        padding: 10px;
+    }
+
+    .item-image img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .item-quantity {
+        font-size: 14px;
+    }
+
+    .minus-btn, .plus-btn {
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+    }
+
+    .continue-shopping-btn, 
+    .proceed-payment-btn {
+        font-size: 14px;
+    }
+}
+}
