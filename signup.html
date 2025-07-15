@@ -4,77 +4,141 @@
   <meta charset="UTF-8" />
   <title>Customer Information Form</title>
   <style>
+    :root {
+      --skyblue: #8ECFF2;
+      --dirtywhite: #f2ebe2;
+      --pastelpink: #FBD7E0;
+      --softyellow: #8ECFF2;
+      --lightbrown: #E6C7A1;
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #fdfdfd;
       margin: 0;
-      padding: 0;
+      font-family: 'Baloo 2', cursive, Arial, sans-serif;
+      background-color: var(--dirtywhite);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem;
     }
 
     .container {
       display: flex;
-      justify-content: space-between;
-      padding: 30px;
-      background-color: #e3f2fd;
-      min-height: 100vh;
+      gap: 2rem;
+      max-width: 1100px;
+      width: 100%;
     }
 
     .form-box, .display-box {
+      background-color: white;
+      border-left: 10px solid var(--skyblue);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+      padding: 2rem;
       width: 48%;
-      background-color: #ffffff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
     }
 
     h2 {
-      color: #1976d2;
-      margin-bottom: 20px;
+      font-size: 2rem;
+      color: var(--skyblue);
+      margin-bottom: 1.5rem;
+      border-bottom: 2px dashed var(--pastelpink);
+      padding-bottom: 0.5rem;
+      text-align: center;
     }
 
     label {
+      font-weight: 600;
+      margin-top: 1rem;
       display: block;
-      margin-top: 10px;
-      font-weight: bold;
     }
 
-    input, select, textarea {
+   input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="password"],
+    textarea,
+    select {
       width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+      padding: 0.6rem 0.8rem;
+      margin-top: 0.3rem;
+      border: 2px solid var(--pastelpink);
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Baloo 2', cursive, Arial, sans-serif;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus,
+    input[type="password"]:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--skyblue);
+      background-color: var(--pastelpink);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 60px;
     }
 
     .radio-group {
-      margin-bottom: 10px;
-    }
-
-    .buttons {
+      margin-top: 0.5rem;
       display: flex;
-      gap: 10px;
-      margin-top: 10px;
+      gap: 1.2rem;
+      align-items: center;
     }
 
-    button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      background-color: #1976d2;
-      color: white;
+    .radio-group input[type="radio"] {
+      margin-left: 0;
       cursor: pointer;
     }
 
+    .radio-group label {
+      font-weight: normal;
+      cursor: pointer;
+      margin: 0;
+    }
+
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    button {
+      background-color: var(--skyblue);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-family: 'Baloo 2', cursive, Arial, sans-serif;
+    }
+
     button:hover {
-      background-color: #1565c0;
+      background-color: #74bde3;
     }
 
     .display-box p {
-      margin: 10px 0;
-      background-color: #f1f8ff;
-      padding: 8px;
-      border-radius: 5px;
+      background-color: var(--pastelpink);
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #555;
+      word-wrap: break-word;
     }
   </style>
 </head>
@@ -121,40 +185,39 @@
         </div>
       </form>
     </div>
+
     <div class="display-box" id="outputBox">
       <h2>Submitted Information</h2>
     </div>
   </div>
 
   <script>
-  function submitForm() {
-    const fname = document.getElementById("fname").value;
-    const lname = document.getElementById("lname").value;
-    const gender = document.querySelector('input[name="gender"]:checked');
-    const address = document.getElementById("address").value;
-    const contact = document.getElementById("contact").value;
-    const email = document.getElementById("email").value;
-    const dob = document.getElementById("dob").value;
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    function submitForm() {
+      const fname = document.getElementById("fname").value;
+      const lname = document.getElementById("lname").value;
+      const gender = document.querySelector('input[name="gender"]:checked');
+      const address = document.getElementById("address").value;
+      const contact = document.getElementById("contact").value;
+      const email = document.getElementById("email").value;
+      const dob = document.getElementById("dob").value;
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
 
-    let outputHTML = `
-      <p><strong>First Name:</strong> ${fname}</p>
-      <p><strong>Last Name:</strong> ${lname}</p>
-      <p><strong>Gender:</strong> ${gender ? gender.value : 'Not selected'}</p>
-      <p><strong>Address:</strong> ${address}</p>
-      <p><strong>Contact:</strong> ${contact}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Date of Birth:</strong> ${dob}</p>
-      <p><strong>Username:</strong> ${username}</p>
-      <p><strong>Password:</strong> ${password}</p>
-    `;
+      let outputHTML = `
+        <p><strong>First Name:</strong> ${fname}</p>
+        <p><strong>Last Name:</strong> ${lname}</p>
+        <p><strong>Gender:</strong> ${gender ? gender.value : 'Not selected'}</p>
+        <p><strong>Address:</strong> ${address}</p>
+        <p><strong>Contact:</strong> ${contact}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Date of Birth:</strong> ${dob}</p>
+        <p><strong>Username:</strong> ${username}</p>
+        <p><strong>Password:</strong> ${password}</p>
+      `;
 
-    document.getElementById("outputBox").innerHTML = `
-      <h2>Submitted Information</h2>
-      ${outputHTML}
-    `;
-
-    document.getElementById("customerForm").reset();
-  }
-</script>
+      document.getElementById("outputBox").innerHTML = `<h2>Submitted Information</h2>${outputHTML}`;
+      document.getElementById("customerForm").reset();
+    }
+  </script>
+</body>
+</html>
