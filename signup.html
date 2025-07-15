@@ -10,6 +10,8 @@
       --pastelpink: #FBD7E0;
       --softyellow: #8ECFF2;
       --lightbrown: #E6C7A1;
+    }
+
     body {
       margin: 0;
       font-family: 'Baloo 2', cursive, Arial, sans-serif;
@@ -29,11 +31,12 @@
       width: 100%;
     }
 
-    .form-box, .display-box {
+    .form-box,
+    .display-box {
       background-color: white;
       border-left: 10px solid var(--skyblue);
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
       padding: 2rem;
       width: 48%;
       box-sizing: border-box;
@@ -56,7 +59,7 @@
       display: block;
     }
 
-   input[type="text"],
+    input[type="text"],
     input[type="email"],
     input[type="date"],
     input[type="password"],
@@ -72,10 +75,7 @@
       transition: border-color 0.3s ease;
     }
 
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    input[type="date"]:focus,
-    input[type="password"]:focus,
+    input:focus,
     textarea:focus,
     select:focus {
       outline: none;
@@ -221,3 +221,10 @@
   </script>
 </body>
 </html>
+
+  
+     
+      
+     
+
+  
