@@ -1,0 +1,134 @@
+:root {
+    --skyblue: #8ECFF2;
+    --dirtywhite: #f2ebe2;
+    --pastelpink: #FBD7E0;
+    --softyellow: #8ECFF2;
+    --lightbrown: #E6C7A1;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Baloo 2', cursive;
+    background-color: var(--dirtywhite);
+    color: #333;
+  }
+
+  header {
+    background-color: var(--skyblue);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 6px dashed white;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+  header p {
+    font-size: 1.1rem;
+    font-style: italic;
+  }
+  section {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  .about, .info, .social {
+    background-color: white;
+    border-left: 10px solid var(--skyblue);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .about h2, .info h2, .products h2, .social h2 {
+    font-size: 2rem;
+    color: var(--skyblue);
+    margin-bottom: 1rem;
+    border-bottom: 2px dashed var(--pastelpink);
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .product-card {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 1rem;
+    width: 230px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid var(--pastelpink);
+  }
+  .product-card:hover {
+    transform: scale(1.04);
+  }
+  .product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    height: 180px;
+    object-fit: cover;
+  }
+  .product-card h3 {
+    color: var(--skyblue);
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  .product-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul li {
+    padding: 0.5rem 0;
+    font-size: 1.05rem;
+    text-align: center;
+  }
+  .info p,
+  .info ul,
+  .info li,
+  .social p,
+  .social a {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .social {
+    text-align: center;
+  }  
+  .social a {
+    display: inline-block;
+    background-color: var(--skyblue);
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    margin: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  .social a:hover {
+    background-color: #74bde3;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    background-color: var(--softyellow);
+    color: #333;
+    margin-top: 2rem;
+    border-top: 3px dotted var(--skyblue);
+  }
+  
