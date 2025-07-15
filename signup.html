@@ -182,7 +182,7 @@
 
         <div class="buttons">
           <button type="button" onclick="submitForm()">Submit</button>
-          <button type="reset" onclick="clearDisplay()>Reset</button>
+          <button type="reset" onclick="clearDisplay()">Reset</button>
         </div>
       </form>
     </div>
@@ -219,6 +219,10 @@
       document.getElementById("outputBox").innerHTML = `<h2>Submitted Information</h2>${outputHTML}`;
       document.getElementById("customerForm").reset();
     }
+
+    function clearDisplay() {
+  document.getElementById("outputBox").innerHTML = "<h2>Submitted Information</h2>";
+}
   </script>
 </body>
 </html>
